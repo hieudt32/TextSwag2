@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">TextSwag</string>
+    <string name="text_suggest">DOUBLE TAB TO EDIT TEXT</string>
+    <string name="abc_shadow">SHADOW</string>
+    <string name="abc_opacity">OPACITY</string>
+    <string name="abc_color">COLOR</string>
+    <string name="dialog_title_share"><![CDATA[SAVE & SHARE]]></string>
+    <string name="share_facebook">facebook</string>
+    <string name="share_instagram">instagram</string>
+    <string name="share_main">email</string>
+    <string name="share_pinterest">pinterest</string>
+    <string name="share_twitter">twitter</string>
+    <string name="share_other">other</string>
+    <string name="cancel">CANCEL</string>
+    <string name="done">DONE</string>
+    <string name="note_random_text">Get a random quote</string>
+    <string name="hint_input_text">Input text here...</string>
+    <string name="key">key_guider</string>
+    <string name="share_activity_label">Share To</string>
+    <string name="key_rating">save_key_rating</string>
+    <string name="key_rating_default">save_key_rating_default</string>
+</resources>

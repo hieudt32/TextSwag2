@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:geekui="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:background="#020202">
+        <FrameLayout
+            android:id="@+id/fl_home_main"
+            android:layout_width="96dp"
+            android:layout_height="96dp">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="@drawable/selector_view_crop_home"/>
+        </FrameLayout>
+        <com.word.swag.text.View.Other.TypefaceTextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/fl_home"
+            android:layout_toLeftOf="@+id/fl_done"
+            android:text="STYLE"
+            android:textSize="42dp"
+            android:textColor="#00a4ae"
+            android:gravity="center"
+            geekui:customTypeface="fonts/BRASSST.ttf"
+            />
+
+        <FrameLayout
+            android:id="@+id/fl_done_main"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_alignParentRight="true"
+            android:onClick="onClickDoneAndDel">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="@drawable/selector_view_crop_done"/>
+        </FrameLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_change_option"
+        android:layout_below="@+id/rl_top"
+        android:background="@color/colorBackground">
+
+        <RelativeLayout
+            android:id="@+id/rl_container"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/pad_5"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:id="@+id/rl_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorBackground">
+
+                <android.opengl.GLSurfaceView
+                    android:id="@+id/GlView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <ImageView
+                    android:id="@+id/imv_exported"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    />
+
+                <com.word.swag.text.View.TouchBaseView
+                    android:id="@+id/frm_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:gravity="center" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/vi_baseview_delete"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:background="@drawable/selector_view_close_text"
+            android:clickable="true"
+            android:focusable="false"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:onClick="onClickDoneAndDel" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_change_option"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_above="@+id/border"
+        android:background="#212a33"
+        android:orientation="vertical"></LinearLayout>
+
+
+    <View
+        android:id="@+id/border"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/ll_buttom"
+        android:background="#01bdc9" />
+
+    <LinearLayout
+        android:id="@+id/ll_buttom"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:layout_gravity="bottom"
+        android:background="@color/colorBackground"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <FrameLayout
+            android:id="@+id/fl_art"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onClickContent">
+
+            <View
+                android:id="@+id/vi_art"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_gravity="center"
+                android:background="@drawable/selector_view_art" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_text_tool"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onClickContent">
+
+            <View
+                android:id="@+id/vi_texttool"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_gravity="center"
+                android:background="@drawable/selector_view_text_tool"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_filter"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onClickContent">
+
+            <View
+                android:id="@+id/vi_filter"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_gravity="center"
+                android:background="@drawable/selector_view_filter" />
+        </FrameLayout>
+    </LinearLayout>
+</RelativeLayout>

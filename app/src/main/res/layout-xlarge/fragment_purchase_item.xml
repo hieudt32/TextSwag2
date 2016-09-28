@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:geekui="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#07080a">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="9dp"
+        android:background="@mipmap/ic_head_purchase"/>
+    <RelativeLayout
+        android:id="@+id/rl_close_purchase"
+        android:layout_width="match_parent"
+        android:layout_height="96dp">
+        <View
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/selector_view_close_baseview_main"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="96dp">
+        <View
+            android:layout_width="350dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@mipmap/ic_title_new_style"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginTop="@dimen/pad_20">
+
+        <GridView
+            android:id="@+id/gv_purchase"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnWidth="200dp"
+            android:numColumns="2"
+            android:verticalSpacing="20dp"
+            android:horizontalSpacing="0dp"
+            android:stretchMode="columnWidth"
+            android:gravity="center"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp">
+        </GridView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        android:background="#123">
+        
+        <com.word.swag.text.View.Other.TypefaceTextView
+            android:layout_width="match_parent"
+            android:layout_height="96dp"
+            android:layout_alignParentTop="true"
+            android:text="UNLOCK EVERYTHING"
+            android:textColor="#69bddf"
+            android:textSize="30dp"
+            android:gravity="center"
+            geekui:customTypeface="fonts/SFRegular.otf"/>
+        <FrameLayout
+            android:id="@+id/fl_purchase"
+            android:layout_width="match_parent"
+            android:layout_height="96dp"
+            android:layout_alignParentBottom="true">
+            <View
+                android:layout_width="250dp"
+                android:layout_height="96dp"
+                android:layout_gravity="center"
+                android:background="@drawable/selector_view_purchase"/>
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:text="2.99$"
+                android:textSize="30dp"
+                android:gravity="center"
+                android:textColor="@color/White"/>
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

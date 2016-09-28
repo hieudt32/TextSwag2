@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:geekui="http://schemas.android.com/apk/res-auto"
+    android:layout_width="56dp"
+    android:layout_height="66dp"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="#212a33"
+    android:padding="@dimen/pad_5">
+
+    <RelativeLayout
+        android:id="@+id/rl_boder_filter"
+        android:layout_width="56dp"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tv_item"
+        android:gravity="center"
+        android:background="#69bddf">
+        <ImageView
+            android:id="@+id/imv_item_thumb"
+            android:layout_width="56dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:layout_margin="1dp"/>
+
+    </RelativeLayout>
+
+
+    <com.word.swag.text.View.Other.TypefaceTextView
+        android:id="@+id/tv_item"
+        android:layout_width="56dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="text"
+        android:textSize="12dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textColor="@drawable/tv_selector_color_pressed"
+        geekui:customTypeface="fonts/SFRegular.otf"/>
+</RelativeLayout>

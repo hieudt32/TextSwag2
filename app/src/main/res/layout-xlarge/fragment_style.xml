@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#212a33"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/fl_style_one"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:background="#212a33"
+                android:padding="20dp">
+
+                <View
+                    android:id="@+id/style_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/selector_view_style_one" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_style_two"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:background="#212a33"
+                android:padding="20dp">
+
+                <View
+                    android:id="@+id/style_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/selector_view_style_two"
+                    android:onClick="onClick" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_style_three"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:background="#212a33"
+                android:padding="20dp">
+
+                <View
+                    android:id="@+id/style_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/selector_view_style_thirten" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_style_four"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:background="#212a33"
+                android:padding="20dp">
+
+                <View
+                    android:id="@+id/style_four"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/selector_view_style_fitteen"/>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_style_five"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:background="#212a33"
+                android:padding="20dp">
+
+                <View
+                    android:id="@+id/style_five"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/selector_view_style_five" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_style_six"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:background="#212a33"
+                android:padding="20dp">
+
+                <View
+                    android:id="@+id/style_six"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/selector_view_style_six" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_style_seven"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:background="#212a33"
+                android:padding="20dp">
+
+                <View
+                    android:id="@+id/style_seven"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/selector_view_style_seven" />
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/fl_style_eight"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:background="#212a33"
+                android:padding="20dp">
+
+                <View
+                    android:id="@+id/style_eight"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/selector_view_style_eight" />
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/fl_style_nine"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:background="#212a33"
+                android:padding="20dp">
+
+                <View
+                    android:id="@+id/style_nine"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/selector_view_style_nine" />
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/fl_style_ten"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:background="#212a33"
+                android:padding="20dp">
+
+                <View
+                    android:id="@+id/style_ten"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/selector_view_style_ten" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_style_eleven"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:background="#212a33"
+                android:padding="20dp">
+
+                <View
+                    android:id="@+id/style_eleven"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/selector_view_style_eleven" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_style_twelve"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:background="#212a33"
+                android:padding="20dp">
+
+                <View
+                    android:id="@+id/style_twelve"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/selector_view_style_twelve"
+                    android:onClick="onClick" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_style_thirteen"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:background="#212a33"
+                android:padding="20dp">
+
+                <View
+                    android:id="@+id/style_thirteen"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/selector_view_style_three" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_style_fourteen"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:background="#212a33"
+                android:padding="20dp">
+
+                <View
+                    android:id="@+id/style_fourteen"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/selector_view_style_four"/>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_style_fifteen"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:background="#212a33"
+                android:padding="20dp">
+
+                <View
+                    android:id="@+id/style_fifteen"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/selector_view_style_fourten" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_style_sixteen"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:background="#212a33"
+                android:padding="20dp">
+
+                <View
+                    android:id="@+id/style_sixteen"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/selector_view_style_sixteen" />
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/fl_style_seventeen"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:background="#212a33"
+                android:padding="20dp">
+
+                <View
+                    android:id="@+id/style_seventeen"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/selector_view_style_seventeen" />
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/fl_style_eighteen"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:background="#212a33"
+                android:padding="20dp">
+
+                <View
+                    android:id="@+id/style_eighteen"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/selector_view_style_eightteen" />
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/fl_style_nineteen"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:background="#212a33"
+                android:padding="20dp">
+
+                <View
+                    android:id="@+id/style_nineteen"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/selector_view_style_nineteen" />
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/fl_style_twenty"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:background="#212a33"
+                android:padding="20dp">
+
+                <View
+                    android:id="@+id/style_twenty"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/selector_view_style_twenty" />
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/fl_style_twenty_one"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:background="#212a33"
+                android:padding="20dp">
+
+                <View
+                    android:id="@+id/style_twenty_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/selector_view_style_twenty_one" />
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/fl_style_twenty_two"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:background="#212a33"
+                android:padding="20dp">
+
+                <View
+                    android:id="@+id/style_twenty_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/selector_view_style_twenty_two" />
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/fl_style_twenty_three"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:background="#212a33"
+                android:padding="20dp">
+
+                <View
+                    android:id="@+id/style_twenty_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/selector_view_style_twenty_three" />
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/fl_style_twenty_four"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:background="#212a33"
+                android:padding="20dp">
+
+                <View
+                    android:id="@+id/style_twenty_four"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/selector_view_style_twenty_four" />
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/fl_style_twenty_five"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:background="#212a33"
+                android:padding="20dp">
+
+                <View
+                    android:id="@+id/style_twenty_five"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/selector_view_style_twenty_five" />
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/fl_style_twenty_six"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:background="#212a33"
+                android:padding="20dp">
+
+                <View
+                    android:id="@+id/style_twenty_six"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/selector_view_style_twenty_six" />
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/fl_style_twenty_seven"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:background="#212a33"
+                android:padding="20dp">
+
+                <View
+                    android:id="@+id/style_twenty_seven"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/selector_view_style_twenty_seven" />
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/fl_style_twenty_eight"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:background="#212a33"
+                android:padding="20dp">
+
+                <View
+                    android:id="@+id/style_twenty_eight"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/selector_view_style_twenty_eight" />
+            </FrameLayout>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</LinearLayout>

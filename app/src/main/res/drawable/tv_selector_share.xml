@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--<item android:state_pressed="true" android:drawable="@color/color_text_selector"/>-->
+    <!--<item android:state_pressed="false" android:drawable="@color/color_text_bg_crop"/>-->
+    <!--<item android:state_enabled="true" android:state_pressed="false" android:drawable="@color/color_text_selector_new" ></item>-->
+    <!--<item android:state_enabled="true" android:state_pressed="true" android:drawable="@color/color_text_selector_blue" ></item>-->
+    <!--<item android:state_enabled="false" android:drawable="@color/color_text_selector_blue"></item>-->
+
+    <item android:state_enabled="true" android:state_pressed="true" android:drawable="@color/color_text_selector_blue" />
+    <item android:state_enabled="true" android:state_focused="true" android:drawable="@color/color_text_selector_blue" />
+    <item android:state_enabled="true" android:state_selected="true" android:drawable="@color/color_text_selector_blue" />
+    <item android:drawable="@color/color_text_selector_new" />
+</selector>
+
