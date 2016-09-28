@@ -1,14 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:geekui="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBackground">
+    android:orientation="vertical"
+    android:background="@drawable/help_gradient_bg">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <com.word.swag.text.View.Other.TypefaceTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="HELP"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:textColor="#00a4ae"
+            geekui:customTypeface="fonts/BRASSST.ttf"/>
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#00a4ae"/>
+
 
     <ImageView
         android:id="@+id/imv_help"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@mipmap/help"
-        android:layout_marginTop="@dimen/pad_5"/>
+        android:layout_weight="1"
+        android:src="@mipmap/help_bg"
+        android:layout_marginTop="@dimen/pad_10"
+        android:padding="@dimen/pad_5"/>
 
-</RelativeLayout>
+    <FrameLayout
+        android:id="@+id/fl_help_close"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+        <View
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/selector_view_help_close"
+            />
+    </FrameLayout>
+</LinearLayout>

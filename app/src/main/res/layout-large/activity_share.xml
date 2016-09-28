@@ -2,15 +2,15 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:geekui="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/help_gradient_bg">
 
     <RelativeLayout
         android:id="@+id/rl_image"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/rl_share_top"
-        android:layout_above="@+id/vi_boder"
-        android:background="#1c1d1c">
+        android:layout_above="@+id/vi_boder">
 
         <ImageView
             android:id="@+id/imv_preview"
@@ -29,7 +29,7 @@
     <RelativeLayout
         android:id="@+id/rl_share_bottom"
         android:layout_width="match_parent"
-        android:layout_height="160dp"
+        android:layout_height="280dp"
         android:background="#212a33"
         android:layout_alignParentBottom="true">
 
@@ -37,7 +37,7 @@
             android:id="@+id/gv_share"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:columnWidth="80dp"
+            android:columnWidth="140dp"
             android:numColumns="3"
             android:verticalSpacing="0dp"
             android:horizontalSpacing="0dp"
@@ -52,32 +52,33 @@
     <RelativeLayout
         android:id="@+id/rl_share_top"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="80dp"
         android:background="#020202"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
         <FrameLayout
             android:id="@+id/fl_home_share"
-            android:layout_width="50dp"
-            android:layout_height="50dp">
+            android:layout_width="80dp"
+            android:layout_height="80dp">
             <View
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="5dp"
+                android:layout_margin="12dp"
                 android:background="@drawable/selector_view_crop_home"/>
         </FrameLayout>
+
         <com.word.swag.text.View.Other.TypefaceTextView
             android:id="@+id/tv_title"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_toRightOf="@+id/fl_home"
-            android:layout_toLeftOf="@+id/fl_done"
             android:text="SHARE"
-            android:textSize="20dp"
+            android:textSize="35dp"
             android:textColor="#00a4ae"
             android:gravity="center"
             geekui:customTypeface="fonts/BRASSST.ttf"
-            />
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
     </RelativeLayout>
 </RelativeLayout>

@@ -36,6 +36,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -74,23 +75,6 @@ public class StartActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        if (Build.VERSION.SDK_INT < 16) {
-//            getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-//                    WindowManager.LayoutParams.FLAG_FULLSCREEN);
-//        }else {
-//
-//            View decorView = getWindow().getDecorView();
-//            // Hide the status bar.
-//            int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
-//            decorView.setSystemUiVisibility(uiOptions);
-//            // Remember that you should never show the action bar if the
-//            // status bar is hidden, so hide that too if necessary.
-//            ActionBar actionBar = getActionBar();
-//            if (actionBar != null){
-//                actionBar.hide();
-//            }
-//
-//        }
         setContentView(R.layout.activity_start);
         if (Build.VERSION.SDK_INT == Build.VERSION_CODES.M){
             this.checkALlPermissions();
@@ -103,12 +87,6 @@ public class StartActivity extends Activity {
         if (adView != null) {
             adView.loadAd(adRequest);
         }
-
-        // Test show dialog
-//        onShowDialogRating();
-//        showActivityShare();
-//        PurchaseFragment purchaseFragment = new PurchaseFragment().newInstance("pur");
-//        purchaseFragment.show(getFragmentManager(), "dialofg");
     }
 
     public void onClickChoose(View view) {
@@ -221,22 +199,30 @@ public class StartActivity extends Activity {
     public void dialogHelp() {
         TextView title = new TextView(this);
         // You Can Customise your Title here
-        title.setText("Help");
-        title.setPadding(10, 10, 10, 10);
-        title.setGravity(Gravity.CENTER);
-        title.setTextSize(25);
+//        title.setText("Help");
+//        title.setPadding(10, 40, 10, 20);
+//        title.setGravity(Gravity.CENTER);
+//        title.setTextSize(25);
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setCustomTitle(title);
-        builder.setCancelable(false);
-        builder.setPositiveButton("Dismiss", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-            }
-        });
+//        builder.setCustomTitle(title);
+//        builder.setCancelable(false);
+//        builder.setPositiveButton("Dismiss", new DialogInterface.OnClickListener() {
+//            @Override
+//            public void onClick(DialogInterface dialog, int which) {
+//            }
+//        });
         final AlertDialog dialog = builder.create();
         LayoutInflater inflater = getLayoutInflater();
         View dialogLayout = inflater.inflate(R.layout.dialog_help, null);
         dialog.setView(dialogLayout);
+
+        FrameLayout fl_help_close = (FrameLayout)dialogLayout.findViewById(R.id.fl_help_close);
+        fl_help_close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
 
         dialog.show();
@@ -246,7 +232,7 @@ public class StartActivity extends Activity {
             public void onShow(DialogInterface d) {
                 ImageView image = (ImageView) dialog.findViewById(R.id.imv_help);
                 Bitmap icon = BitmapFactory.decodeResource(getResources(),
-                        R.mipmap.help);
+                        R.mipmap.help_bg);
                 float imageWidthInPX = (float) image.getWidth();
 
                 LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(Math.round(imageWidthInPX),
