@@ -12,6 +12,7 @@ import android.content.CursorLoader;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.res.Configuration;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -39,9 +40,11 @@ import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.facebook.ads.AdSize;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.word.swag.text.Fragment.PurchaseFragment;
@@ -57,6 +60,7 @@ import java.io.OutputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.jar.Manifest;
+import com.facebook.ads.*;
 
 /**
  * Created by ThanhDat on 1/11/16.
@@ -70,6 +74,8 @@ public class StartActivity extends Activity {
     public static final int MY_PERMISSIONS_ALL = 2000;
     public static final int MY_PERMISSIONS_REQUEST_CAMERA = 2001;
     public static final int MY_PERMISSIONS_EXTERNAL_STORAGE = 2002;
+    private String My_PLACEMENT_ID = "1795577167343608_1795577424010249";
+    private com.facebook.ads.AdView adViewFb;
 
 
     @Override
@@ -82,6 +88,42 @@ public class StartActivity extends Activity {
             return;
         }
 
+//        loadAdsGG();
+        loadAdsFb();
+    }
+
+    // Load ads of facebook
+
+    protected void loadAdsFb(){
+
+        //Determine screen size
+        if ((getResources().getConfiguration().screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK) == Configuration.SCREENLAYOUT_SIZE_LARGE) {
+            adViewFb = new com.facebook.ads.AdView(this, My_PLACEMENT_ID, AdSize.BANNER_HEIGHT_90);
+        }
+        else if ((getResources().getConfiguration().screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK) == Configuration.SCREENLAYOUT_SIZE_NORMAL) {
+            adViewFb = new com.facebook.ads.AdView(this, My_PLACEMENT_ID, AdSize.BANNER_HEIGHT_50);
+        }
+        else if ((getResources().getConfiguration().screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK) == Configuration.SCREENLAYOUT_SIZE_SMALL) {
+            adViewFb = new com.facebook.ads.AdView(this, My_PLACEMENT_ID, AdSize.BANNER_HEIGHT_50);
+        }
+        else if ((getResources().getConfiguration().screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK) == Configuration.SCREENLAYOUT_SIZE_XLARGE) {
+            adViewFb = new com.facebook.ads.AdView(this, My_PLACEMENT_ID, AdSize.BANNER_HEIGHT_90);
+        }
+        else {
+            adViewFb = new com.facebook.ads.AdView(this, My_PLACEMENT_ID, AdSize.BANNER_HEIGHT_50);
+        }
+        // Find the main layout of your activity
+        RelativeLayout layout = (RelativeLayout)findViewById(R.id.rl_ads);
+
+        // Add the ad view to your activity layout
+        layout.addView(adViewFb);
+
+        // Request to load an ad
+        adViewFb.loadAd();
+    }
+
+    // Load ads of google
+    protected void loadAdsGG(){
         AdView adView = (AdView) this.findViewById(R.id.adsView);
         AdRequest adRequest = new AdRequest.Builder().build();
         if (adView != null) {

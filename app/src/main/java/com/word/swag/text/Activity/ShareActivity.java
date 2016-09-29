@@ -18,6 +18,10 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.facebook.ads.Ad;
+import com.facebook.ads.AdError;
+import com.facebook.ads.InterstitialAd;
+import com.facebook.ads.InterstitialAdListener;
 import com.word.swag.text.Adapter.ShareAdapter;
 import com.word.swag.text.Fragment.RatingFragment;
 import com.word.swag.text.R;
@@ -28,14 +32,15 @@ import java.io.File;
 /**
  * Created by company on 8/17/16.
  */
-public class ShareActivity extends Activity {
+public class ShareActivity extends Activity implements InterstitialAdListener {
 
     private int [] mIcon = new int[]{R.mipmap.ic_facebook_share, R.mipmap.ic_twitter_share, R.mipmap.ic_instagram_share, R.mipmap.ic_email_share, R.mipmap.ic_pinterest_share, R.mipmap.ic_other_share};
     private String[] mName = new String[]{"Facebook", "Twitter", "Instagram", "Email", "Pinterest", "Other"};
     private Boolean isRating = false;
     private String imageLocalPath;
     private Share shareIntent = new Share();
-
+    private InterstitialAd interstitialAd;
+    private String My_PLACEMENT_ID = "1795577167343608_1795577424010249";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,12 +55,52 @@ public class ShareActivity extends Activity {
             public void run() {
                 if (!checkKeyRating()){
                     onShowDialogRating();
+                }else {
+                    showAdsFb();
                 }
             }
         }, 2000);
 
         getPathFromMainActivity();
         init();
+
+    }
+
+    //Show ads of facebook
+
+    protected void showAdsFb(){
+        loadInterstitialAd();
+    }
+
+    private void loadInterstitialAd(){
+        interstitialAd = new InterstitialAd(this, My_PLACEMENT_ID);
+        interstitialAd.setAdListener(ShareActivity.this);
+        interstitialAd.loadAd();
+    }
+
+    @Override
+    public void onInterstitialDisplayed(Ad ad) {
+
+    }
+
+    @Override
+    public void onInterstitialDismissed(Ad ad) {
+
+    }
+
+    @Override
+    public void onError(Ad ad, AdError adError) {
+
+    }
+
+    @Override
+    public void onAdLoaded(Ad ad) {
+        interstitialAd.show();
+    }
+
+    @Override
+    public void onAdClicked(Ad ad) {
+
     }
 
     @Override
@@ -179,4 +224,11 @@ public class ShareActivity extends Activity {
         super.onBackPressed();
     }
 
+    @Override
+    protected void onDestroy() {
+        if (interstitialAd != null) {
+            interstitialAd.destroy();
+        }
+        super.onDestroy();
+    }
 }

@@ -906,15 +906,15 @@ public class MainActivity extends Activity implements TextToolFragment.OnValueCh
                     });
             //end
             //SonTH
-            interstitialAd = new InterstitialAd(mContext);
-            interstitialAd.setAdUnitId("ca-app-pub-9530168898799729/8364966695");
-            interstitialAd.setAdListener(new AdListener() {
-                @Override
-                public void onAdLoaded() {
-                    displayAds();
-                }
-            });
-            loadAd();
+//            interstitialAd = new InterstitialAd(mContext);
+//            interstitialAd.setAdUnitId("ca-app-pub-9530168898799729/8364966695");
+//            interstitialAd.setAdListener(new AdListener() {
+//                @Override
+//                public void onAdLoaded() {
+//                    displayAds();
+//                }
+//            });
+//            loadAd();
         }
     }
 
@@ -926,18 +926,18 @@ public class MainActivity extends Activity implements TextToolFragment.OnValueCh
         overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
     }
 
-    private void loadAd()
-    {
-        interstitialAd.loadAd(new AdRequest.Builder().build());
-    }
-
-    private void displayAds()
-    {
-        if (interstitialAd.isLoaded())
-        {
-            interstitialAd.show();
-        }
-    }
+//    private void loadAd()
+//    {
+//        interstitialAd.loadAd(new AdRequest.Builder().build());
+//    }
+//
+//    private void displayAds()
+//    {
+//        if (interstitialAd.isLoaded())
+//        {
+//            interstitialAd.show();
+//        }
+//    }
 
     public void onBackStartActivity(){
         Intent intent = new Intent(this, StartActivity.class);
